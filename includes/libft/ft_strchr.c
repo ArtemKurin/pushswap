@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mjodge <mjodge>                            +#+  +:+       +#+        */
+/*   By: mjodge <mjodge@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/11 16:03:59 by mjodge            #+#    #+#             */
-/*   Updated: 2021/10/11 16:04:04 by mjodge           ###   ########.fr       */
+/*   Updated: 2021/11/26 15:12:19 by mjodge           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,13 +14,11 @@
 
 char	*ft_strchr(const char *s, int c)
 {
-	while (*s != '\0')
+	while (s && *s != '\0')
 	{
 		if (*s == (unsigned char)c)
 			return ((char *)s);
 		s++;
 	}
-	if (*s == (unsigned char)c)
-		return ((char *)s);
 	return (NULL);
 }

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_lstmap.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mjodge <mjodge>                            +#+  +:+       +#+        */
+/*   By: mjodge <mjodge@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/11 16:03:59 by mjodge            #+#    #+#             */
-/*   Updated: 2021/10/11 16:04:04 by mjodge           ###   ########.fr       */
+/*   Updated: 2021/11/25 19:02:08 by mjodge           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,7 +42,7 @@ static t_list	*mapHelper(t_list *lst, void *(*f)(void *))
 
 t_list	*ft_lstmap(t_list *lst, void *(*f)(void *))
 {
-	if (!(lst))
+	if (!lst)
 		return (lst);
-	return (mapHelper(lst, f);
+	return (mapHelper(lst, f));
 }

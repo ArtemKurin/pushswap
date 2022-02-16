@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: mjodge <mjodge>                            +#+  +:+       +#+         #
+#    By: mjodge <mjodge@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/10/11 16:15:28 by mjodge            #+#    #+#              #
-#    Updated: 2021/10/11 16:15:32 by mjodge           ###   ########.fr        #
+#    Updated: 2021/11/26 21:43:46 by mjodge           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -24,7 +24,8 @@ SRC = 			ft_atoi.c ft_bzero.c ft_calloc.c ft_isalnum.c\
 				ft_substr.c ft_tolower.c ft_toupper.c\
 				ft_lstadd_back.c ft_lstadd_front.c ft_lstclear.c\
 				ft_lstdelone.c ft_lstiter.c ft_lstlast.c\
-				ft_lstnew.c ft_lstsize.c
+				ft_lstnew.c ft_lstsize.c get_next_line_utils.c\
+				get_next_line.c
 
 OBJ = $(patsubst %.c, %.o, $(SRC))
 OBJ_BONUS = $(patsubst %.c, %.o, $(SRC_BONUS))

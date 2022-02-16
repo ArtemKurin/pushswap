@@ -3,16 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mjodge <mjodge>                            +#+  +:+       +#+        */
+/*   By: mjodge <mjodge@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/11 16:03:59 by mjodge            #+#    #+#             */
-/*   Updated: 2021/10/11 16:04:04 by mjodge           ###   ########.fr       */
+/*   Updated: 2021/11/26 15:26:08 by mjodge           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static int	ftGetCount(char const *s, char c, int length)
+static int	ftGetCount(char *s, char c, int length)
 {
 	int	count;
 	int	i;
@@ -35,7 +35,7 @@ static int	ftGetCount(char const *s, char c, int length)
 	return (count);
 }
 
-static int	provMem(char **res, char const *s, char c, int length)
+static int	provMem(char **res, char *s, char c, int length)
 {
 	int	count;
 	int	flag;
@@ -64,7 +64,7 @@ static int	provMem(char **res, char const *s, char c, int length)
 	return (1);
 }
 
-static void	ftFill(char **res, char const *s, char c)
+static void	ftFill(char **res, char *s, char c)
 {
 	int	i;
 	int	n;
@@ -98,7 +98,7 @@ static char	**ftFree(char **res)
 	return (NULL);
 }
 
-char	**ft_split(char const *s1, char c)
+char	**ft_split(char *s1, char c)
 {
 	int		count;
 	char	**res;

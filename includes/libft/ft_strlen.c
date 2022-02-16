@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strlen.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mjodge <mjodge>                            +#+  +:+       +#+        */
+/*   By: mjodge <mjodge@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/11 16:03:59 by mjodge            #+#    #+#             */
-/*   Updated: 2021/10/11 16:04:04 by mjodge           ###   ########.fr       */
+/*   Updated: 2021/11/26 21:38:49 by mjodge           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ size_t	ft_strlen(const char *s)
 	size_t	acc;
 
 	acc = 0;
-	while (s[acc])
+	while (s && s[acc])
 		acc++;
 	return (acc);
 }

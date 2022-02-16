@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mjodge <mjodge>                            +#+  +:+       +#+        */
+/*   By: mjodge <mjodge@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/11 16:03:59 by mjodge            #+#    #+#             */
-/*   Updated: 2021/10/11 16:04:04 by mjodge           ###   ########.fr       */
+/*   Updated: 2021/11/27 18:13:06 by mjodge           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,11 +52,10 @@ int	ft_atoi(const char *str)
 	while (ft_isSpaces(*str) && *str != '\0')
 		str++;
 	if (*str == '+' || *str == '-')
-	{
-		if (*str == '-')
+		if (*str++ == '-')
 			sign = sign * (-1);
-		str++;
-	}
+	if (!*str)
+		return (-1);
 	if (*str >= '0' && *str <= '9')
 	{
 		while (*str && (*str >= '0' && *str <= '9'))

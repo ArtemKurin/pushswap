@@ -1,34 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strmapi.c                                       :+:      :+:    :+:   */
+/*   operations2.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mjodge <mjodge@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/10/11 16:03:59 by mjodge            #+#    #+#             */
-/*   Updated: 2021/11/26 21:34:10 by mjodge           ###   ########.fr       */
+/*   Created: 2021/11/27 17:31:14 by mjodge            #+#    #+#             */
+/*   Updated: 2021/11/27 18:27:28 by mjodge           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "./includes/push_swap.h"
 
-char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
+void	ft_rr(t_env *env, int printflag)
 {
-	unsigned int		acc;
-	char				*ns;
+	if (printflag == 1)
+		write(1, "rr\n", 3);
+	ft_rarb(&(env->a_head), 0);
+	ft_rarb(&(env->b_head), 0);
+}
 
-	if (!(s))
-		return (NULL);
-	acc = ft_strlen(s);
-	ns = (char *)malloc(sizeof(char) * (acc + 1));
-	if (!(ns))
-		return (NULL);
-	ns[acc] = '\0';
-	acc = 0;
-	while (s[acc])
-	{
-		ns[acc] = (*f)(acc, s[acc]);
-		acc++;
-	}
-	return (ns);
+void	ft_ss(t_env *env, int printflag)
+{
+	if (printflag == 1)
+		write(1, "ss\n", 3);
+	ft_sasb(&(env->a_head), 0);
+	ft_sasb(&(env->b_head), 0);
 }
